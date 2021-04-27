@@ -17,6 +17,7 @@
 					</div><!--search-bar end-->
 					<nav>
 						<ul>
+							
 							<li>
 								<router-link to="/" >
 									<span><img src="images/icon1.png" alt=""></span>
@@ -24,6 +25,28 @@
 								</router-link>
                
 							</li>
+							<li>
+								<router-link to="/edit-post" >
+									<span><img src="images/icon1.png" alt=""></span>
+									Edit post
+								</router-link>
+               
+							</li>
+							<li>
+								<router-link to="/login" >
+									<span><img src="images/icon1.png" alt=""></span>
+									Login
+								</router-link>
+               
+							</li>
+							<li>
+								<router-link to="/view-post" >
+									<span><img src="images/icon1.png" alt=""></span>
+									View post
+								</router-link>
+               
+							</li>
+							
 							</ul>
 
 					</nav><!--nav end-->
