@@ -3,7 +3,7 @@
 
 
     
-    <header>
+    <header v-if= "!$route.meta.hideNavBar">
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
@@ -27,25 +27,26 @@
 							</li>
 							<li>
 								<router-link to="/edit-post" >
-									<span><img src="images/icon1.png" alt=""></span>
+									
 									Edit post
 								</router-link>
                
 							</li>
 							<li>
-								<router-link to="/login" >
-									<span><img src="images/icon1.png" alt=""></span>
-									Login
-								</router-link>
-               
-							</li>
-							<li>
 								<router-link to="/view-post" >
-									<span><img src="images/icon1.png" alt=""></span>
+									
 									View post
 								</router-link>
                
 							</li>
+							<li>
+								<router-link to="/login" >
+									
+									Login
+								</router-link>
+               
+							</li>
+							
 							
 							</ul>
 

@@ -1,0 +1,8 @@
+1-Signup
+2-Login
+3-Create Post
+4-Delete Post
+5-Edit Post
+6-Read Post
+7-Like Post
+8-Switch to Mysql
