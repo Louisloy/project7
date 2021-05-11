@@ -27,7 +27,7 @@
                                         <div class="row">
                                             <div class="col-lg-12 no-pdd">
                                                 <div class="sn-field">
-                                                    <input type="text" v-model="form.email" placeholder="Username">
+                                                    <input type="text" v-model="form.email" placeholder="Email">
                                                     <i class="la la-user"></i>
                                                 </div>
                                                 <!--sn-field end-->
@@ -86,7 +86,7 @@
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="password" v-model="form.password" placeholder="Repeat Password">
+                                                        <input type="password" v-model="form.repeatPassword" placeholder="Confirm Password">
                                                         <i class="la la-lock"></i>
                                                     </div>
                                                 </div>
@@ -155,7 +155,7 @@ export default  {
         handleSignup(){
             axios.post("http://localhost:3000/api/auth/signup",this.form)
             .then((response)=>{
-                if(reponse.status==200){
+                if(response.status==201){
                  console.log('Successful')
                  this.form={}
                  window.location.href='#/login'
@@ -164,6 +164,7 @@ export default  {
             
         },
         handleLogin(){
+            
             axios.post("http://localhost:3000/api/auth/login",this.form)
             .then((response)=>{
                 if(reponse.status==200){
@@ -174,9 +175,7 @@ export default  {
                  window.location.href='/'
                 }
             })
-          .catch((error)=>{
-              console.log(error.message)
-          })
+          
         }
     }
 }
